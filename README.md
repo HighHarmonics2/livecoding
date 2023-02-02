@@ -1,5 +1,5 @@
-## Livecoding
-Code files for livecoding and composed liveconding projects. 
+## Livecoding - HighHarmonics
+Code files for livecoding and composed livecoding projects.
 
 ### Contents
 - Tidal
@@ -10,4 +10,4 @@ Code files for livecoding and composed liveconding projects.
 ---
 
 ### No License   
-I do not license my work. Anything here can be used for any purpose, with or without attribution.
+There is no license. Anything here can be used for any purpose, with or without attribution.

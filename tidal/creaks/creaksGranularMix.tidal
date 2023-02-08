@@ -2,7 +2,7 @@
 Creaks Granular Mix
   HighHarmonics
 
-Description: Creaks Granular Mix uses livecoding with prepared code and is based on patterns prepared previously for Creaks.tidal. A quasi granular synthesis texture is created by combining multiple variants of the same pattern. Each pattern has prepared parameter options that are enabled or disabled during live rendition. This mix further builds texture by adding VST filters to each Tidal channel. This is done via multi-channel routing into MaxMSP, where Max is used a a VST host and mixing tool. Multi-section form is established by moving through each set of patterns - creating transitions, and finding interesting ways to combine patterns.
+Description: Creaks Granular Mix uses livecoding with prepared code. It is based on patterns prepared previously for Creaks.tidal. A quasi granular synthesis texture is created by combining multiple variants of the same pattern. Each pattern has prepared parameter options that are enabled or disabled during live rendition (via code comments). This mix further builds texture by adding a VST filter to each Tidal channel. This is done via multi-channel routing into MaxMSP, where Max is used as a VST host and mixing tool. Multi-section form is established by moving through each set of patterns - creating transitions, and finding interesting ways to combine patterns.
 
 Sound source: - SuperDirt samples: ades2, yeah, peri, reverbkick, db-lt-mt-sn
 
@@ -26,11 +26,12 @@ Pattern Name          Chans       FF-snapshot/sample bank
 7. ReverbKick Pulse   d12         Bd
 9. Low Drums          d11         Bd (ht-lt)
 
-Performance Path (establish a unquie path for each rendition)
+Performance Path: t5 (establish a unquie path for each rendition)
 Swirls -> EchoLoops -> Sweeps -> Sparks -> EchoLoops -> Shimmer -> EchoLoops ->
   ReverbKick / Jerky -> ReverbKick / Sparks + Low Drums -> fade out ReverbKick,
   -> Swirls + ...
 
+YouTube: rendition t5: https://www.youtube.com/watch?v=o3ySbbwSw2Q
 ############################################################
 setcps (135/60/4)
 ############################################################

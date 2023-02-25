@@ -15,6 +15,6 @@ Pieces that utilize SuperDirt samples are intended to be freely used, played, ad
 ## Pieces / rendition links
 
 - creaks/Creaking.tidal
-    - session 3
+    - session 3: https://youtu.be/lYev3mJ3RbA
 - creaks/creaksGranularMix.tidal
     - session 5: https://www.youtube.com/watch?v=o3ySbbwSw2Q

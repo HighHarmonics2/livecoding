@@ -10,4 +10,4 @@ Code files for livecoding and composed livecoding projects.
 ---
 
 ### No License   
-There is no license. Anything here can be used for any purpose, with or without attribution.
+There is no license. Anything in this repository can be used for any purpose, with or without attribution.

@@ -1,0 +1,67 @@
+{--
+This file sets up everything needed to enable Tidal to send OSC messages to MaxMSP in addition to SuperDirt/SuperCollider. It follows the structure defined for OSC multiple message format in the Tidal Cycles Documentation: https://tidalcycles.org/docs/configuration/MIDIOSC/osc
+
+	- establish an OSC target
+	- set the parameters (arguments) that are sent with the OSC "/play" address pattern
+	- defines the mapping between OSC targets and messages (oscmap)
+	- pairs the parameters between names in Tidal and names in the target
+	- starts the OSC stream that sends to both targets
+	- creates the channels for use in Tidal (x1, x2, x3, ...)
+--}
+
+-- define the OSC target to be used for Max
+let target = Target {oName = "oscMAX",         -- target name in error msg
+              oAddress = "localhost", -- The target's network address, normally "localhost"
+              oPort = 5050,           -- The network port the target is listening on
+              oLatency = 0.2,         -- Additional delay, to smooth out network jitter/get things in sync
+              oSchedule = Live,       -- The scheduling method - see below
+              oWindow = Nothing,      -- Not yet used
+              oHandshake = False,     -- SuperDirt specific
+              oBusPort = Nothing      -- Also SuperDirt specific
+             }
+
+-- add any parameter to be sent to Max - VF = float, VI = int, VS = string, Nothing = no default
+	oscplay = OSC "/play" $ ArgList [
+			("orbit", Just $ VI 0),
+			("s", Nothing), -- without "s" no OSC sent - this is for sound
+		    ("delTimeL", Just $ VF 0),
+			("delTimeR", Just $ VF 0),
+			("feedBkL", Just $ VF 0),
+			("feedBkR", Just $ VF 0),
+			("vstParam1", Just $ VF 0.35),
+			("vstParam2", Just $ VF 0.5),
+			("vstParam3", Just $ VF 0.8),
+			("vstParam4", Just $ VF 0.7),
+			("vstParam5", Just $ VF 0.5),
+			("vstParam6", Just $ VF 0.9),
+		    ("cps", Just $ VF 0),
+		    ("cycle", Just $ VF 0), -- start of event in cycles
+		    ("delta", Just $ VF 0)  -- duration of event in cycles
+		    ]
+
+
+	oscmap = [(target, [oscplay]), (superdirtTarget, [superdirtShape])]
+
+-- define all custom parameters for Tidal to know about
+	delTimeL = pF "delTimeL"-- NOTE: left assignment is param name in Tidal, right is oscplay
+	delTimeR = pF "delTimeR"
+	feedBkL = pF "feedBkL"
+	feedBkR = pF "feedBkR"
+	bandAFreq = pF "vstParam1"
+	bandAGain = pF "vstParam2"
+	bandAQ = pF "vstParam3"
+	bandBFreq = pF "vstParam4"
+	bandBGain = pF "vstParam5"
+	bandBQ = pF "vstParam6"
+
+stream <- startStream defaultConfig oscmap
+
+let x1 = streamReplace stream 1
+let x2 = streamReplace stream 2
+let x3 = streamReplace stream 3
+let x4 = streamReplace stream 4
+let x5 = streamReplace stream 5
+let x6 = streamReplace stream 6
+let x7 = streamReplace stream 7
+let x8 = streamReplace stream 8
+let x9 = streamReplace stream 9

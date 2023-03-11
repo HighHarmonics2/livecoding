@@ -2,7 +2,7 @@
 
 Scrapes is a composed livecoding performance.
 
-Rendition: 
+Performance rendition: https://www.youtube.com/watch?v=nMWbmHtl67E
 
 Scrapes is created in Tidal Cycles using custom samples with audio processing and mixing in MaxMSP. Livecoding parameters values are sent via OSC for delay and filter bank plugins in Max.
 

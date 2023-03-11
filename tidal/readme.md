@@ -19,4 +19,4 @@ Pieces that utilize SuperDirt samples are intended to be freely used, played, ad
 - creaks/creaksGranularMix.tidal
     - session 5: https://www.youtube.com/watch?v=o3ySbbwSw2Q
 - Scrapes/scrapes.tidal (uses OSC -> MaxMSP)
-    - session 2:
+    - session 2: https://www.youtube.com/watch?v=nMWbmHtl67E

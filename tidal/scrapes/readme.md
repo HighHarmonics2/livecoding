@@ -14,6 +14,7 @@ Files
     - custom delay signal processing
     - mixer
     - plugin host - AU plugin per channel (FabFilter Pro Q-3 filter banks)
+- oscSubPatches.maxpat: Reference patch with the subpatches used for OSC processing. Included here to isolate the OSC processing from the rest of the patch. NOT functional. Start here to see how OSC processing in Max is handled. 
 
 Component configuration:
 - Tidal Cycles -> SuperDirt/SuperCollider audio out -> MaxMSP audio (with VST/AU plugins)

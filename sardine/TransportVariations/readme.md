@@ -22,6 +22,8 @@ Audio processing
 - EQ filters also have presets, which are changed by a Midi Controller.
 - Display of the filter output dynamically shows how the filter changes impact the audio.
 
+[Performance rendition on YouTube](https://youtu.be/1FM4BhySs1Y).
+
 ### About Transport Variations
 - Sardine Players (Pa, Pb, etc) are set up to play the transport sample files. Multiple players for each sound allow for variants with different parameter and pattern values. These work well for playback where the sound source is more recognizable.
 

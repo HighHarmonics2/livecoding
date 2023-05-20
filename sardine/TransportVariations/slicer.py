@@ -1,5 +1,5 @@
 ###### Transport sounds 
-def soundsPlayers():
+def soundsPlayers(): 
     Pa * d('trimet:0', p=2, legato=2, amp='[0.1:1,0.12] [1:0.1,0.12]', pan='[0:1,0.1] [1:0,0.15]', **rev1, orbit=4)
     Pa * d('trimet:0', p=2, legato=1.2, amp='.8', speed= 1, pan='[0:1,0.1]', **rev1, orbit=0)
 

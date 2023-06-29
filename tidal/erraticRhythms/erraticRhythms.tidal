@@ -1,0 +1,67 @@
+###########################################
+########## Performance Code ###############
+
+setcps (60/60/4)
+
+##### didactic pattern visualizer ######
+asap $ connectionMax 4 # speedSequenser 2
+d12 $ grid "1 0 0 0"
+d12 silence
+hush
+
+d1 $ every 2 (mask "1") $ mask ("1 0 0 0") $ freq "[70 ~ 799] [<500 ~ > < ~!2 <300*2 300*3> > [1170 ~ 900]]" #s "superhex"
+--- d1 $ fast 1 $ every 2 (mask "~ 0 1 0") $ mask ("0 0 1 1") $ freq "[70 ~ 799] [< <500 300> ~ > < ~!2 <300*2 300*3 [~ 600 ~ 800 ~ ]> > [1170 ~ [900|500]] ]" #s "superhex"
+-- d1 $ fast 2 $ freq "[70 ~ 799] [500 ~!2 [1170 ~ 900]]" #s "superhex"
+  #connectionN 4 #sizeMin 12 #sizeMax 80 #figure "rect" #color "0519f5"
+  #sustain "0.08"
+  #amp "0.1!3 0.6"
+  #pan (slow 3 $ range 0.1 0.9 $ sine)
+  #room 0.8 #size 0.7 #dry 0.4
+  #hpf 70 #hresonance 0.1
+  #orbit 0
+
+d1 silence
+
+d2 $ mask ("1 0 0 1") $ freq ("{100 200 400 800 900 1100 1300 1500 1600}%<5.2>" |+ "0") #s "psin"
+-- d2 $ mask ("1 1 1 1 1 1 1 1 0") $ freq ("{1100 200 400 800 900 1100 1300 1500 1600}%16" |+ "0") #s "psin"
+-- d2 $ every 3 (mask "1 0 0 1") $ mask ("1 0 1 1") $ jux (rev) $ freq ("{100 200 400 800 900 100 1300 1500 1600 1800 2100 2400 ~}%11" |+ "0") #s "psin"
+  #connectionN 3 #sizeMin 12 #sizeMax 60 #color "8905f5" #nudge 0.2
+  #sustain (slow 2 $ range 0.01 0.3 $ saw)
+  #amp (slow 2 $ range 0.08 0.25 $ sine)
+  #room 0.8 #size 0.7 #dry 0.5
+  #delay 0.3 #delaytime 0.5 #delayfb 0.2
+  -- #hpf 70 #hresonance 0.3
+  #lpf 700
+  -- #lpf (slow 2 $ range 200 1000 $ sine) #resonance 0.2
+
+d2 silence
+
+d3 $ fast 1 $ mask ("1 0 1") $ s "[supergong!17]/<3.4 5.2 1.2>" #nudge 0.2
+-- d3 $ mask ("1 1 1 0 1") $ s "[supergong!17]/<1 1.4 0.8>" #nudge 0.2
+-- d3 $ mask ("1 1 1 0 1") $ s "[supergong!17]/<0.4 0.6>"
+-- d3 $ jux (rev) $ mask ("1 1 0 1 1") $ s "[supergong!17]/<0.6 1>" #nudge 0.3
+  #connectionN 2 #sizeMin 10 #sizeMax 20 #figure "circle" #color "2df505"
+  #sustain 0.2
+  #freq (irand 400 + 50)
+  -- #freq (slow 4 $ range 70 700 $ sine)
+  #amp "0.2!3 0.6!2"
+  #voice 0.8 -- #decay 1
+  #room 0.8 # size 0.5 # dry 0.6
+  -- #cps (slow 4 $ 0.1 + sine * 0.4)
+  #lpf 1200 #resonance "<0.1!4 0.3>"
+  #orbit 2
+
+setcps (60/60/4)
+d3 silence
+
+d4 $ fast 1 $ freq ("~ 400 ~ 800 [~ <1300 1600> ~!2]" |* 1) # s "soskick"
+-- d4 $ fast 0.5 $ every 2 (degradeBy "<0.2 0.5 0.8>") $ freq ("~ 400 ~ 800 [~ <1300 1600> ~!2]" |* 0.5) # s "soskick"
+  #connectionN 1 #sizeMin 12 #sizeMax 80 #figure "circle" #color "f58711"
+  #sustain 0.7
+  #amp 0.4
+  #room 0.8 # size 0.7 # dry 0.6
+  #delay 0.3 #delaytime 0.5 #delayfb 0.2
+
+d4 silence
+
+hush

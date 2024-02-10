@@ -15932,67 +15932,67 @@
 										"count" : 16,
 										"data" : [ 											{
 												"key" : 1,
-												"value" : [ 116 ]
+												"value" : [ 134 ]
 											}
 , 											{
 												"key" : 2,
-												"value" : [ 101 ]
+												"value" : [ 114 ]
 											}
 , 											{
 												"key" : 3,
-												"value" : [ 111 ]
+												"value" : [ 104 ]
 											}
 , 											{
 												"key" : 4,
-												"value" : [ 113 ]
+												"value" : [ 107 ]
 											}
 , 											{
 												"key" : 5,
-												"value" : [ 127 ]
+												"value" : [ 119 ]
 											}
 , 											{
 												"key" : 6,
-												"value" : [ 122 ]
+												"value" : [ 103 ]
 											}
 , 											{
 												"key" : 7,
-												"value" : [ 136 ]
+												"value" : [ 122 ]
 											}
 , 											{
 												"key" : 8,
-												"value" : [ 120 ]
-											}
-, 											{
-												"key" : 9,
-												"value" : [ 109 ]
-											}
-, 											{
-												"key" : 10,
-												"value" : [ 131 ]
-											}
-, 											{
-												"key" : 11,
-												"value" : [ 121 ]
-											}
-, 											{
-												"key" : 12,
-												"value" : [ 130 ]
-											}
-, 											{
-												"key" : 13,
-												"value" : [ 132 ]
-											}
-, 											{
-												"key" : 14,
 												"value" : [ 106 ]
 											}
 , 											{
+												"key" : 9,
+												"value" : [ 100 ]
+											}
+, 											{
+												"key" : 10,
+												"value" : [ 122 ]
+											}
+, 											{
+												"key" : 11,
+												"value" : [ 117 ]
+											}
+, 											{
+												"key" : 12,
+												"value" : [ 125 ]
+											}
+, 											{
+												"key" : 13,
+												"value" : [ 130 ]
+											}
+, 											{
+												"key" : 14,
+												"value" : [ 113 ]
+											}
+, 											{
 												"key" : 15,
-												"value" : [ 109 ]
+												"value" : [ 134 ]
 											}
 , 											{
 												"key" : 16,
-												"value" : [ 101 ]
+												"value" : [ 113 ]
 											}
  ]
 									}
@@ -17720,7 +17720,7 @@
 
 							}
  ],
-						"vst~ProQ3-v1active" : [ 0 ],
+						"vst~ProQ3-v1active" : [ 1 ],
 						"vst~ProR" : [ 							{
 								"filetype" : "C74Snapshot",
 								"version" : 2,
@@ -17787,7 +17787,8 @@
 					"active" : 					{
 						"masterGain-v1" : 0,
 						"masterGain-v2" : 0,
-						"preampKnob" : 0
+						"preampKnob" : 0,
+						"vst~ProQ3" : 0
 					}
 ,
 					"autorestore" : "masterPresets.json",
@@ -24988,7 +24989,7 @@
 						}
 ,
 						"classnamespace" : "dsp.gen",
-						"rect" : [ 149.0, 470.0, 1310.0, 925.0 ],
+						"rect" : [ 264.0, 510.0, 1310.0, 925.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 10.0,
@@ -39190,8 +39191,8 @@
 			}
 , 			{
 				"name" : "ampMODstereo.gendsp",
-				"bootpath" : "~/Music/max/projects/wavetable",
-				"patcherrelativepath" : "../../../../../Music/max/projects/wavetable",
+				"bootpath" : "~/dev/sound/livecoding/maxmsp/wavetable",
+				"patcherrelativepath" : ".",
 				"type" : "gDSP",
 				"implicit" : 1
 			}

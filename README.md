@@ -4,8 +4,8 @@ Code files for livecoding and composed livecoding projects.
 ### Contents
 - Tidal
 - [Sardine](https://github.com/Bubobubobubobubo/sardine) - livecoding in python
-- maxmsp (coming)
-- chuck
+- maxmsp
+- samples
 
 ---
 

@@ -14,4 +14,4 @@ Each part has a different timbre, using synthesizers available in SuperDirt (sup
 - **erraticRhythms.tidal** Tidal code - may be freely used
 
 ### Performance
-- [YouTube session](https://www.youtube.com/watch?v=dwrwnNVT-Po)  
+- [YouTube session](https://youtu.be/QgCi6n5ZPRI)  
